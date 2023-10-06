@@ -3,7 +3,7 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className="bg-[url('https://i.ibb.co/dBbkPRB/omar-ram-h9-Pv-Mvsx-Ik-unsplash.jpg')] h-screen bg-cover bg-no-repeat bg-black bg-opacity-100 relative">
+        <div className="bg-[url('https://i.ibb.co/dBbkPRB/omar-ram-h9-Pv-Mvsx-Ik-unsplash.jpg')] h-screen bg-cover bg-no-repeat bg-black bg-opacity-100 relative mt-4">
             <div className='text-white font-bold text-xl text-center md:text-3xl md:pt-20 md:text-center lg:text-5xl lg:py-56 lg:text-end pt-20 lg:mr-10'>
             <h2 >KEEP YOUR BODY FIT WITH <br />  REGULAR  FOOTBALL TRAINING</h2>
             </div>

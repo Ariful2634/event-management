@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../Pages../../../assets/flogo1.jpg'
+import icon from '../Pages../../../assets/user.png'
 
 const Navbar = () => {
 
@@ -33,10 +34,10 @@ const Navbar = () => {
   <div className="navbar-end">
   <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          <img src={icon} />
         </div>
       </label>
-    <a className="btn">Login</a>
+    <button className='btn btn-warning font-bold'>Login</button>
   </div>
 </div>
     );
