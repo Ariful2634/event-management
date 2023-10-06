@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../Pages../../../assets/logo.jpg'
+import logo from '../Pages../../../assets/flogo1.jpg'
 
 const Navbar = () => {
 
@@ -20,7 +20,7 @@ const Navbar = () => {
         
       </ul>
     </div>
-   <img className='w-[100px] rounded' src={logo} alt="" />
+   <img className='w-[90px] rounded' src={logo} alt="" />
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

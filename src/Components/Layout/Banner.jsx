@@ -1,5 +1,5 @@
 import React from 'react';
-import training from '../Layout../../../assets/training.jpg'
+
 
 const Banner = () => {
     return (

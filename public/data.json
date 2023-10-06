@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "name": "Stadium Rental for Matches",
+      "image": "https://i.ibb.co/HrPCN4n/willian-justen-de-vasconcellos-cd-Wj-Ba-Lnp-PU-unsplash.jpg",
+      "price": 5000.00,
+      "short_description": "Rent a football stadium for your matches or tournaments."
+    },
+    {
+      "id": 2,
+      "name": "VIP Hospitality Packages",
+      "image": "https://i.ibb.co/4mfTk7Y/Evolution-Suite.jpg",
+      "price": 250.00,
+      "short_description": "We offer VIP hospitality experiences with premium seating, catering, and more."
+    },
+    {
+      "id": 3,
+      "name": "Live Streaming Services",
+      "image": "https://i.ibb.co/gmJ3JDf/e273db60-c41e-11ed-b0b9-11abb4ff0877.jpg",
+      "price": 1000.00,
+      "short_description": "We provide live streaming of football matches for fans around the world."
+    },
+    {
+      "id": 4,
+      "name": "Football Match Tickets",
+      "image": "https://i.ibb.co/tmsDb1V/49833324728-c87e9edaac-b.jpg",
+      "price": 30.00,
+      "short_description": "You can purchase tickets to watch exciting football matches live."
+    },
+    {
+      "id": 5,
+      "name": "Football Merchandise Booth",
+      "image": "https://i.ibb.co/Ht5ys2R/images.jpg",
+      "price": 500.00,
+      "short_description": "Set up a merchandise booth at football events to sell fan gear."
+    },
+    {
+      "id": 6,
+      "name": "Event Security Services",
+      "image": "https://i.ibb.co/dghpYwc/5aa65903c9c15adb60000005.jpg",
+      "price": 1500.00,
+      "short_description": "Ensure the safety and security of football events with professional security services."
+    }
+  ]
+  
