@@ -9,6 +9,10 @@ import {
 import Root from './Components/Root/Root';
 import Home from './Components/Pages/Home';
 import ServiceDetails from './Components/Pages/ServiceDetails';
+import Register from './Components/Register/Register';
+import Login from './Components/Login/Login';
+import AuthProvider from './Provider/AuthProvider';
+
 
 const router = createBrowserRouter([
   {
@@ -23,6 +27,14 @@ const router = createBrowserRouter([
         path:'/serve/:id',
         element:<ServiceDetails></ServiceDetails>,
         loader:()=>fetch('../data.json')
+      },
+      {
+        path:'/register',
+        element:<Register></Register>
+      },
+      {
+        path:'/login',
+        element:<Login></Login>
       }
     ]
   },
@@ -30,6 +42,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+     <AuthProvider>
      <RouterProvider router={router} />
+     </AuthProvider>
   </React.StrictMode>,
 )

@@ -14,7 +14,7 @@ const Service = ({ serve }) => {
                     <p className='font-semibold mb-6'>{short_description}</p>
                     <div className="card-actions justify-end items-center">
                         <p className='font-bold'>Price: ${price}</p>
-                        <button className="btn btn-warning font-bold"><Link to={`/serve/${id}`}>View Details</Link></button>
+                     <Link to={`/serve/${id}`}>   <button className="btn btn-warning font-bold">View Details</button></Link>
                     </div>
                 </div>
             </div>
