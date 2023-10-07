@@ -12,7 +12,7 @@ const ServiceDetails = () => {
     const load = useLoaderData()
    
 
-    const details = load.find(load=>load.id==id)
+    const details = load.find(load=>load.id===intId)
     
 
     return (

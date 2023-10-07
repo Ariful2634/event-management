@@ -1,12 +1,16 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
-// import Swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 
 const Login = () => {
-    // const [success,setSuccess]=useState("")
+    const [success,setSuccess]=useState("")
+    const [errorIn,setErrorIn]=useState("")
 
     const {logInUser,googleLogin} = useContext(AuthContext)
+
+    const location = useLocation()
+    const navigate = useNavigate()
 
     const handleLogin = e =>{
         e.preventDefault()
@@ -18,19 +22,35 @@ const Login = () => {
         logInUser(email,password)
         .then(res=>{
             const user = res.user
-            // setSuccess(Swal.fire(
-            //     'Congratulations!',
-            //     'You logged in Successfully!',
-            //     'success'
-            //   ))
+            setSuccess(Swal.fire(
+                'Congratulations!',
+                'You logged in Successfully!',
+                'success'
+              ))
+
+              // navigate after login
+
+            navigate(location?.state ? location.state : '/')
             console.log(user)
         })
         .catch(err=>{
+            setErrorIn(err.message)
             console.log(err)
         })
 
         
     }
+
+    // if(errorIn){
+    //     Swal.fire({
+    //         icon: 'error',
+    //         title: 'Oops...',
+    //         text: 'Something went wrong!',
+    //         footer: '<a href="">Why do I have this issue?</a>'
+    //       })
+    // }
+
+
 
     const handleGoogle = ()=>{
         googleLogin()
@@ -39,6 +59,7 @@ const Login = () => {
             console.log(user)
         })
         .catch(error=>{
+            
             console.log(error)
         })
     }
@@ -81,6 +102,9 @@ const Login = () => {
         <p className='text-center font-bold'>Do not have an account? <Link className='text-blue-700' to='/register'>Register</Link></p>
       </form>
       
+    </div>
+    <div>
+        
     </div>
   </div>
 </div>

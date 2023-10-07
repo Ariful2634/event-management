@@ -1,13 +1,14 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
-// import Swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 
 
 const Register = () => {
 
     const {createUser} = useContext(AuthContext)
-    // const [success,setSuccess]=useState("")
+    const [success,setSuccess]=useState("")
+    const [validPass,setValidPass]=useState("")
 
     const handleRegister = e =>{
         e.preventDefault()
@@ -17,18 +18,34 @@ const Register = () => {
         const password = form.get('password')
         console.log(name,email,password)
 
+        setValidPass("")
+
+        if(password.length<6){
+            setValidPass("Password should be at least 6 characters or longer")
+            return;
+        }
+        else if(!/[A-Z]/.test(password)){
+            setValidPass("Password should contain at least one uppercase letter")
+            return;
+        }
+        else if(!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)){
+            setValidPass("Password should contain at least one special  character")
+            return;
+        }
+
         createUser(email,password)
         .then(res=>{
             const user = res.user
             
             console.log(user)
-            // setSuccess(Swal.fire(
-            //     'Congratulations!',
-            //     'User Created Successfully!',
-            //     'success'
-            //   ))
+            setSuccess(Swal.fire(
+                'Congratulations!',
+                'User Created Successfully!',
+                'success'
+              ))
         })
         .catch(err=>{
+            setValidPass(err.message)
             console.log(err)
         })
 
@@ -63,12 +80,18 @@ const Register = () => {
           <input type="password" name='password' placeholder="Password" className="input input-bordered" required />
          
         </div>
+        <div>
+        {
+            validPass && <p className='text-red-500 font-bold'>{validPass}</p>
+        }
+    </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Register</button>
         </div>
         <p className='text-center font-bold'>Already have an account? <Link to='/login' className='text-blue-700'>Login</Link></p>
       </form>
     </div>
+    
   </div>
 </div>
     );
