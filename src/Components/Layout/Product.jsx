@@ -11,7 +11,7 @@ const Product = () => {
     return (
         <div className='mt-20'>
             <h2 className='text-4xl font-bold text-blue-600 text-center'>Some Of Our Premium Products</h2>
-            <div className='grid lg:grid-cols-2 gap-5'>
+            <div className='grid lg:grid-cols-2 grid-cols-1 md:grid-cols-2 gap-5'>
                 {
                     product.map(pro=><Pro pro={pro}></Pro>)
                 }

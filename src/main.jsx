@@ -13,6 +13,7 @@ import Register from './Components/Register/Register';
 import Login from './Components/Login/Login';
 import AuthProvider from './Provider/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import ProductDetails from './Components/Layout/ProductDetails';
 
 
 const router = createBrowserRouter([
@@ -26,7 +27,6 @@ const router = createBrowserRouter([
       },
       {
         path:'/serve/:id',
-        
         loader:()=>fetch('../data.json'),
         element:<PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
       },
@@ -37,6 +37,11 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element:<Login></Login>
+      },
+      {
+        path:'/details/:id',
+        loader:()=>fetch('../product.json'),
+        element:<PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>
       }
     ]
   },
