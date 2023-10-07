@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "name": "Premium Football",
+      "image": "https://i.ibb.co/6yfPghD/ft.png",
+      "price": 60.00,
+      "short_description": "Rent a football stadium for your matches or tournaments."
+    },
+    {
+      "id": 2,
+      "name": "Jersey",
+      "image": "https://i.ibb.co/QbgS25Y/jersey.jpg",
+      "price": 50.00,
+      "short_description": "We offer VIP hospitality experiences with premium seating, catering, and more."
+    },
+    {
+      "id": 3,
+      "name": "Premium Boots",
+      "image": "https://i.ibb.co/gzn41GY/boot1.jpg",
+      "price": 100.00,
+      "short_description": "We provide live streaming of football matches for fans around the world."
+    },
+    {
+      "id": 4,
+      "name": "Premium Gloves",
+      "image": "https://i.ibb.co/h2RvyKh/glove.jpg",
+      "price": 30.00,
+      "short_description": "You can purchase tickets to watch exciting football matches live."
+    }
+    
+  ]
+  

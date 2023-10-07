@@ -41,13 +41,22 @@ const handleLogout = ()=>{
     </ul>
   </div>
   <div className="navbar-end">
+  <div>
+      {
+        user &&  <p>{user.displayName}</p>
+      }
+       </div>
   <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
          {
           user ?  <img src={user.photoURL} /> :
           <img src={icon} /> 
          }
+         
+         
+         
         </div>
+      
       </label>
    <div>
     {
