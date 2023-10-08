@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import 'aos/dist/aos.css';
 
 const Pro = ({pro}) => {
     const {id,name,image}=pro;

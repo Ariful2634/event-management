@@ -17,6 +17,7 @@ import ProductDetails from './Components/Layout/ProductDetails';
 import Training from './Components/Pages/Training';
 import Error from './Components/ErrorPage/Error';
 import AboutUs from './Components/About/AboutUs';
+import Product from './Components/Layout/Product';
 
 
 const router = createBrowserRouter([
@@ -43,9 +44,13 @@ const router = createBrowserRouter([
         element:<Login></Login>
       },
       {
+        path:'/product',
+        element:<PrivateRoute><Product></Product></PrivateRoute>
+      },
+      {
         path:'/details/:id',
         loader:()=>fetch('../product.json'),
-        element:<PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>
+        element:<ProductDetails></ProductDetails>
       },
       {
         path:'/training',

@@ -1,6 +1,7 @@
 import React from 'react';
 import tr from '../Pages../../../assets/Arteta.jpeg'
 import t from '../Pages../../../assets/t.jpg'
+import 'aos/dist/aos.css';
 
 
 const Training = () => {
