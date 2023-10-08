@@ -2,13 +2,14 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2'
-
+import { FaEye,FaEyeSlash } from 'react-icons/fa';
 
 const Register = () => {
 
     const {createUser} = useContext(AuthContext)
     const [success,setSuccess]=useState("")
     const [validPass,setValidPass]=useState("")
+    const [show,setShow]=useState(false)
 
     const handleRegister = e =>{
         e.preventDefault()
@@ -72,7 +73,8 @@ const Register = () => {
           <label className="label">
             <span className="label-text">Photo URL</span>
           </label>
-          <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered" required />
+          <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered " required />
+        
         </div>
         <div className="form-control">
           <label className="label">
@@ -84,8 +86,8 @@ const Register = () => {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" name='password' placeholder="Password" className="input input-bordered" required />
-         
+          <input type={show ? "text" : "password"} name='password' placeholder="Password" className="input input-bordered relative" required />
+          <span className='absolute top-[360px] left-[255px]' onClick={()=>{setShow(!show)}}>{show ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}</span>
         </div>
         <div>
         {

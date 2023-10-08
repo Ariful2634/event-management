@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const AboutUs = () => {
     return (
         <div>
@@ -16,6 +17,7 @@ const AboutUs = () => {
                     <p><span className='font-bold'>4. Community Engagement:</span> Beyond the pitch, we actively engage with the community. We organize charity matches, fundraisers, and outreach programs that use football as a tool for positive change.</p>
                 </div>
             </div>
+            
         </div>
     );
 };
