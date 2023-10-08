@@ -5,7 +5,7 @@ import t from '../Pages../../../assets/t.jpg'
 
 const Training = () => {
     return (
-        <div>
+        <div  data-aos="fade-down-left">
             <div className='flex lg:flex-row flex-col gap-4  justify-around mt-8'>
                 <div className='md:flex md:justify-center'>
                     <img className='w-[550px] rounded h-[300px]' src={tr} alt="" />

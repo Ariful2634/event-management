@@ -6,7 +6,7 @@ import { FaEye,FaEyeSlash } from 'react-icons/fa';
 
 const Register = () => {
 
-    const {createUser} = useContext(AuthContext)
+    const {createUser,updateUserProfile} = useContext(AuthContext)
     const [success,setSuccess]=useState("")
     const [validPass,setValidPass]=useState("")
     const [show,setShow]=useState(false)
@@ -18,26 +18,37 @@ const Register = () => {
         const photo = form.get('photo')
         const email = form.get('email')
         const password = form.get('password')
-        console.log(name,photo,email,password)
+        
 
         setValidPass("")
 
         if(password.length<6){
-            setValidPass("Password should be at least 6 characters or longer")
-            return;
+            
+            e.target.reset()
+            return setValidPass("Password should be at least 6 characters or longer")
         }
         else if(!/[A-Z]/.test(password)){
-            setValidPass("Password should contain at least one uppercase letter")
-            return;
+           
+            e.target.reset()
+            return setValidPass("Password should contain at least one uppercase letter")
         }
         else if(!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)){
-            setValidPass("Password should contain at least one special  character")
-            return;
+            
+            e.target.reset()
+            return setValidPass("Password should contain at least one special  character")
         }
 
         createUser(email,password)
         .then(res=>{
             const user = res.user
+            e.target.reset()
+            // updateUserProfile()
+            // .then(()=>[
+
+            // ])
+            // .catch(err=>{
+
+            // })
             
             console.log(user)
             setSuccess(Swal.fire(
@@ -48,6 +59,7 @@ const Register = () => {
         })
         .catch(err=>{
             setValidPass(err.message)
+            e.target.reset()
             console.log(err)
         })
 
@@ -67,7 +79,7 @@ const Register = () => {
           <label className="label">
             <span className="label-text">Your Name</span>
           </label>
-          <input type="text" name='name' placeholder="Name" className="input input-bordered" required />
+          <input type="text" name='name' placeholder="Name" className="input input-bordered w-[320px]" required />
         </div>
         <div className="form-control">
           <label className="label">
@@ -87,7 +99,7 @@ const Register = () => {
             <span className="label-text">Password</span>
           </label>
           <input type={show ? "text" : "password"} name='password' placeholder="Password" className="input input-bordered relative" required />
-          <span className='absolute top-[360px] left-[255px]' onClick={()=>{setShow(!show)}}>{show ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}</span>
+          <span className='absolute top-[360px] left-[320px]' onClick={()=>{setShow(!show)}}>{show ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}</span>
         </div>
         <div>
         {

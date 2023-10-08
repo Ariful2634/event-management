@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Pro = ({pro}) => {
     const {id,name,image}=pro;
     return (
-        <div>
+        <div data-aos="fade-up-left">
             <div className='shadow-lg p-5 lg:mr-20 rounded-lg mt-10 '>
                 <div className='flex justify-center'>
                 <img className='w-[250px]' src={image} alt="" />

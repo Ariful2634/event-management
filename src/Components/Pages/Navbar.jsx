@@ -14,6 +14,15 @@ const Navbar = () => {
          <li><NavLink to='/register'>Register</NavLink></li>
     </>
 
+    // {
+    //   // / updateUserProfile
+
+    //   updateUserProfile()
+    //   .then()
+    //   .catch()
+    // }
+
+    
 const handleLogout = ()=>{
   logOut()
   .then()

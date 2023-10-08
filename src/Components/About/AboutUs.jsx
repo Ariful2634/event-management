@@ -3,7 +3,7 @@ import React from 'react';
 
 const AboutUs = () => {
     return (
-        <div>
+        <div data-aos="flip-right">
             <div className='space-y-4 shadow-xl p-6 mt-16'>
                 <h2 className='text-3xl text-center font-bold'>About Us</h2>
                 <div className='font-medium'>

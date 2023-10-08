@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import 'aos/dist/aos.css';
 
 const Service = ({ serve }) => {
     const { id,name, image, price, short_description } = serve;
     return (
-        <div>
+        <div data-aos="fade-up">
             <div className="card  bg-base-100 shadow-xl">
                 
                 <figure><img className='h-[250px] w-full' src={image} alt="Shoes" /></figure>

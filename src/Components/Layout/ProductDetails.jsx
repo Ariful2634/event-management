@@ -11,7 +11,7 @@ const ProductDetails = () => {
     const details = proDetails.find(pro=>pro.id===intId)
 
     return (
-        <div className='flex justify-center mt-10'>
+        <div className='flex justify-center mt-10' data-aos="fade-up-right">
            <div className="card w-96   bg-base-100 shadow-xl">
                 
                 <figure><img className='h-[350px] w-full' src={details.image} alt="Shoes" /></figure>
