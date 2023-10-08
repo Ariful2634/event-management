@@ -2,7 +2,7 @@ import React from 'react';
 import Marquee from "react-fast-marquee";
 import img from '../Feedback../../../assets/gface1.png'
 import face from '../Feedback../../../assets/mface1.png'
-import user from '../Feedback../../../assets/user.png'
+
 
 const Feedback = () => {
     return (

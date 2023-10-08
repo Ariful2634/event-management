@@ -56,7 +56,18 @@ const Login = () => {
         googleLogin()
         .then(result=>{
             const user = result.user
+            setSuccess(Swal.fire(
+              'Congratulations!',
+              'You logged in Successfully!',
+              'success'
+            ))
+
+            // navigate after login
+
+            navigate(location?.state ? location.state : '/')
             console.log(user)
+            console.log(user)
+            
         })
         .catch(error=>{
             

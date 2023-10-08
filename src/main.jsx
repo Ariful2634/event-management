@@ -14,6 +14,7 @@ import Login from './Components/Login/Login';
 import AuthProvider from './Provider/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import ProductDetails from './Components/Layout/ProductDetails';
+import Training from './Components/Pages/Training';
 
 
 const router = createBrowserRouter([
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
         path:'/details/:id',
         loader:()=>fetch('../product.json'),
         element:<PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>
+      },
+      {
+        path:'/training',
+        element:<PrivateRoute><Training></Training></PrivateRoute>
       }
     ]
   },

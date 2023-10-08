@@ -1,14 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Banner = () => {
     return (
-        <div className="bg-[url('https://i.ibb.co/dBbkPRB/omar-ram-h9-Pv-Mvsx-Ik-unsplash.jpg')] h-screen bg-cover bg-no-repeat bg-black bg-opacity-100 relative mt-4">
-            <div className='text-white font-bold text-xl text-center md:text-3xl md:pt-20 md:text-center lg:text-5xl lg:py-56 lg:text-end pt-20 lg:mr-10'>
+        <div className="bg-[url('https://i.ibb.co/dBbkPRB/omar-ram-h9-Pv-Mvsx-Ik-unsplash.jpg')] h-screen bg-cover bg-no-repeat opacity-100 relative mt-4">
+            <div className='text-white font-bold text-xl text-center md:text-xl md:pt-20 md:text-center lg:text-5xl lg:py-56 lg:text-end pt-16 lg:mr-10'>
             <h2 >KEEP YOUR BODY FIT WITH <br />  REGULAR  FOOTBALL TRAINING</h2>
             </div>
-            <div className='lg:top-[350px] w-[150px]  md:left-[290px] top-[150px] md:top-[170px] left-[130px] lg:left-[900px] absolute'>
-                <button className='btn font-bold'>Apply For Training</button>
+            <div className='text-white text-center text-base md:text-2xl absolute left-10 md:left-28 lg:top-[350px] lg:left-[600px] font-bold lg:text-xl'>
+                <h2>Want to took coaching from our best coach? <br /> Click on apply now button!</h2>
+            </div>
+            <div className='lg:top-[420px] w-[150px]  md:left-[320px] top-[180px] md:top-[220px] left-[150px] lg:left-[750px] absolute'>
+                <Link to='/training'><button className='btn font-bold'>Apply Now</button></Link>
             </div>
         </div>
     );
