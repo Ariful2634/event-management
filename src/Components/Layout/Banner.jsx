@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
         <div className="bg-[url('https://i.ibb.co/dBbkPRB/omar-ram-h9-Pv-Mvsx-Ik-unsplash.jpg')] h-screen bg-cover bg-no-repeat opacity-100 relative mt-4">
+            <div className='text-white  absolute left-10 top-2 italic md:text-2xl md:left-32 lg:top-4 lg:left-[200px] lg:text-4xl font-bold'>
+                <h2>Welcome To Football Club Event Management</h2>
+            </div>
             <div className='text-white font-bold text-xl text-center md:text-xl md:pt-20 md:text-center lg:text-5xl lg:py-56 lg:text-end pt-16 lg:mr-10'>
             <h2 >KEEP YOUR BODY FIT WITH <br />  REGULAR  FOOTBALL TRAINING</h2>
             </div>

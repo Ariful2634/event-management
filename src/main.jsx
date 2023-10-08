@@ -15,12 +15,15 @@ import AuthProvider from './Provider/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import ProductDetails from './Components/Layout/ProductDetails';
 import Training from './Components/Pages/Training';
+import Error from './Components/ErrorPage/Error';
+import AboutUs from './Components/About/AboutUs';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<Error></Error>,
     children:[
       {
         path:'/',
@@ -47,6 +50,10 @@ const router = createBrowserRouter([
       {
         path:'/training',
         element:<PrivateRoute><Training></Training></PrivateRoute>
+      },
+      {
+        path:'/about',
+        element:<AboutUs></AboutUs>
       }
     ]
   },
