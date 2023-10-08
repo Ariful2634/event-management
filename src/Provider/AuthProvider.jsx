@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import {  createUserWithEmailAndPassword, onAuthStateChanged, GoogleAuthProvider, signInWithEmailAndPassword, signOut, signInWithPopup, updateProfile } from "firebase/auth";
+import {  createUserWithEmailAndPassword, onAuthStateChanged, GoogleAuthProvider, signInWithEmailAndPassword, signOut, signInWithPopup } from "firebase/auth";
 import auth from '../firebase/firebase';
 
 export const AuthContext = createContext(null)
@@ -40,13 +40,7 @@ const AuthProvider = ({children}) => {
     }
 
 
-    // update user's profile
-
-    const updateUserProfile = ()=>{
-        updateProfile(auth.user,{
-            displayName: "Md Ariful Islam", photoURL: "https://i.ibb.co/ScgNTwv/IMG-20190724-134228.jpg"
-        })
-    }
+    
 
     // subscribe
 
@@ -69,7 +63,7 @@ const AuthProvider = ({children}) => {
         user,
         logOut,
         loading,
-        updateUserProfile
+        
     }
     
     return (

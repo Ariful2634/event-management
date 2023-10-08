@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2'
 import { FaEye,FaEyeSlash } from 'react-icons/fa';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
 
@@ -41,14 +42,12 @@ const Register = () => {
         createUser(email,password)
         .then(res=>{
             const user = res.user
+            updateProfile(user,{
+              displayName:name,
+              photoURL:photo
+            })
             e.target.reset()
-            // updateUserProfile()
-            // .then(()=>[
-
-            // ])
-            // .catch(err=>{
-
-            // })
+           
             
             console.log(user)
             setSuccess(Swal.fire(
