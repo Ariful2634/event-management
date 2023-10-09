@@ -5,8 +5,9 @@ import 'aos/dist/aos.css';
 const Pro = ({pro}) => {
     const {id,name,image}=pro;
     return (
-        <div data-aos="fade-up-left">
-            <div className='shadow-lg p-5 lg:mr-20 rounded-lg mt-10 '>
+        <div data-aos="flip-right">
+           
+            <div className='shadow-lg p-5 lg:mr-20 mr-0 md:mr-0 rounded-lg mt-10 '>
                 <div className='flex justify-center'>
                 <img className='w-[250px]' src={image} alt="" />
                 </div>

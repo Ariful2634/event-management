@@ -1,0 +1,29 @@
+[
+    {
+      "id": 1,
+      "name": "UEFA Champions League",
+      "image": "https://i.ibb.co/HnM3GgY/ucl.jpg",
+      "short_description": "The UEFA Champions League, the pinnacle of European football, brings together the continent's finest clubs in an epic battle for supremacy. Witness footballing legends, jaw-dropping goals, and drama on a grand scale."
+    },
+    {
+      "id": 2,
+      "name": "La liga",
+      "image": "https://i.ibb.co/kccyXRy/laliga.jpg",
+      "short_description": "La Liga  a showcase of Spain's footballing brilliance, unites top Spanish clubs for a thrilling spectacle. Experience the passion, skill, and intensity of Spanish football as teams vie for the crown in this premier league competition."
+    },
+    {
+      "id": 3,
+      "name": "English Premier League",
+      "image": "https://i.ibb.co/NsVB0yh/pl.jpg",
+      "short_description": "Experience the heart-pounding action of the Premier League, where the best teams in England come together to battle for supremacy. With world-class talent, fierce rivalries, and unforgettable moments, the Premier League is football at its finest. Join us as we witness history."
+    },
+    {
+      "id": 4,
+      "name": "UEFA Euro Cup",
+      "image": "https://i.ibb.co/N37MJs2/uro.jpg",
+      "price": 30.00,
+      "short_description": "UEFA Euro, the stage where national pride takes center stage, invites Europe's football nations to compete for glory. Embrace the colors of your country and join the fervor as the continent's best teams clash in a tournament that ignites the spirit of unity and competition."
+    }
+    
+  ]
+  
