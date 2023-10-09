@@ -18,9 +18,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A
 
-<i>Write your explanation here</i>
+<i> greeting ={} means assigning an empty object {} to the greeting variable. So when we console.log(greetign); it gave output {} </i>
 
 </p>
 </details>
@@ -43,9 +43,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
-<i>Write your explanation here</i>
+<i>Here a is contain a number and b contain a string. so JavaScript converts the number 1 to a string and then concatenates the two strings together. that is why we get the string "12" as the output.</i>
 
 </p>
 </details>
@@ -69,9 +69,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A
 
-<i>Write your explanation here</i>
+<i>Here food variable contains 4 types of food. then declare an object info with a property favoriteFood that initially references the first element of the food array, which is pizza. So, info.favoriteFood is initially pizza. Then reassign a value in info.favoriteFood, so that pixxa is out and new value is into info.favoriteFood. so,when we console.log(food), food variable remain unchange. Thats why it gave out option A </i>
 
 </p>
 </details>
@@ -94,9 +94,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
-<i>Write your explanation here</i>
+<i>In the sayHi function, we have defined it to accept one parameter called name. So, when you call the function with sayHi(), we are not providing any argument. In JavaScript, if we don't provide a value for a parameter, it will have a value of undefined. That is why the out will be option B</i>
 
 </p>
 </details>
@@ -122,9 +122,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
-<i>Write your explanation here</i>
+<i>We take a variable count=0 and a array nums = [0,1,2,3]. Here use forEach method to iterate over each element in the array. forEach loop check the element truthy or falsy, if truthy it increament the count variable by 1. So, 0 is falsy , so it does not increment count. 1,2,3 is truthy, so it increment count. So the output is 3</i>
 
 </p>
 </details>
