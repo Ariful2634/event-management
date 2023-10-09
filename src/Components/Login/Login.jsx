@@ -110,11 +110,12 @@ const Login = () => {
 
             <hr />
 
-            <div className='text-center'>
-              <button onClick={handleGoogle} className='btn btn-outline'>Google Login</button>
-            </div>
+           
             <p className='text-center font-bold'>Do not have an account? <Link className='text-blue-700' to='/register'>Register</Link></p>
           </form>
+          <div className='text-center'>
+              <button onClick={handleGoogle} className='btn btn-outline'>Google Login</button>
+            </div>
 
 
         </div>
